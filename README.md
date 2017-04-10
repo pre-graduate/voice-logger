@@ -9,8 +9,8 @@ Voice Logger is an application the uses Microsoft's Kinect (V1) for recording vo
 
 ## Overview
 
-The appliction was written in C# and uses the Kinect SDK for voice recognition and NAudio for audio file creation. The UI is WPF based with help from the Metro UI framework which helps give the app modern styling to look more professional. 
-
+The application was written in C# and uses the Kinect SDK for voice recognition and NAudio for audio file creation. The UI is WPF based with help from the Metro UI framework which helps give the app modern styling to look more professional. The application uses the built in voice recognition technology found in the Kinect so interaction with the GUI isn't necessary and instead commands can be issued via voice saving time and means the app doesn't get in the way of coding. 
+ 
 ## Development
 
 While I am not planning to add to this project in the near future there are many features I could implement, these potential options are listed below.
