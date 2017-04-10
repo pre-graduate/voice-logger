@@ -43,7 +43,7 @@ namespace VoiceLogger.Pages
             Export.Text = PreviousLocation;
             Number.Text = Previous;
 
-            Switch.Window.Title = "CodeLog";
+            Switch.Window.Title = "Voice Logger";
             Switch.SwitchTo<MainPage>();
         }
     }
