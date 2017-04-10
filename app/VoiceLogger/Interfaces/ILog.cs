@@ -1,4 +1,4 @@
-namespace CodeLog.Interfaces
+namespace VoiceLogger.Interfaces
 {
     public interface ILog
     {

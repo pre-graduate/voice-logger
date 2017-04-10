@@ -1,8 +1,8 @@
 using Microsoft.Speech.Recognition;
-using CodeLog.Interfaces;
-using CodeLog.Pages;
+using VoiceLogger.Interfaces;
+using VoiceLogger.Pages;
 
-namespace CodeLog.Classes
+namespace VoiceLogger.Classes
 {
     public class Speech : ISpeech
     {

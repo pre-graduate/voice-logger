@@ -3,9 +3,9 @@ using System;
 using System.IO.Compression;
 using System.Windows.Forms;
 using System.IO;
-using static CodeLog.Classes.Alerts;
+using static VoiceLogger.Classes.Alerts;
 
-namespace CodeLog.Classes
+namespace VoiceLogger.Classes
 {
     public class ZipFolder
     {
@@ -51,7 +51,7 @@ namespace CodeLog.Classes
             }
             catch(Exception)
             {
-                ShowError("We encountered an error when writing the file", "Error!");
+                //ShowError("We encountered an error when writing the file", "Error!");
                 return false;
             }
 

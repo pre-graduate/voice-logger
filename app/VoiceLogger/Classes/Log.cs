@@ -1,9 +1,9 @@
-using CodeLog.Interfaces;
+using VoiceLogger.Interfaces;
 using NAudio.Wave;
 using System;
 using System.IO;
 
-namespace CodeLog.Classes
+namespace VoiceLogger.Classes
 {
     public class Log : ILog
     {

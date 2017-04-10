@@ -1,12 +1,14 @@
 using System.Windows.Controls;
 using System.ComponentModel;
 using System.Windows;
+using System.Text;
 using System;
 
-using CodeLog.Interfaces;
-using CodeLog.Classes;
+using static VoiceLogger.Classes.Alerts;
+using VoiceLogger.Interfaces;
+using VoiceLogger.Classes;
 
-namespace CodeLog.Pages
+namespace VoiceLogger.Pages
 {  
     public partial class MainPage : Page, ISwitchable
     {
@@ -20,15 +22,10 @@ namespace CodeLog.Pages
         {
             InitializeComponent();
 
-            if (WindowsKinect.InitialiseDevice())
+            if (!WindowsKinect.InitialiseDevice())
             {
-               
-            }
-            else
-            {
-                #if false
+                MessageBox.Show("Couldn't find an available Kinect device!", "No Kinect Found!");
                 Application.Current.Shutdown();
-                #endif
             }
 
             RecognitionEngine = new Recogniser(WindowsKinect);
@@ -41,7 +38,7 @@ namespace CodeLog.Pages
 
             if (!ZipFolder.FilesToCopy)
             {
-                MessageBox.Show("There are no logs to export", "No Logs!", MessageBoxButton.OK, MessageBoxImage.Information);
+                ShowError("No Logs!", "There are no logs to export");
                 return;
             }
 
@@ -75,7 +72,19 @@ namespace CodeLog.Pages
 
         private void HandleCommands(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("hide interface, show interface, extract, initate, export, terminate, play log, cease");
+            var builder = new StringBuilder();
+
+            builder.Append("Hide Interface, ");
+            builder.Append("Show Interface, ");
+            builder.Append("Extract, ");
+            builder.Append("Initate, ");
+            builder.Append("Terminate, ");
+            builder.Append("Play Log, ");
+            builder.Append("Cease, ");
+            builder.Append("Sleep, ");
+            builder.Append("Wake");
+
+            ShowInfo("Commands", builder.ToString());
         }
 
         private void HandleMenu(object sender, RoutedEventArgs e)

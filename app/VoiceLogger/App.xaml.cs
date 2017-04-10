@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace CodeLog
+namespace VoiceLogger
 {
     public partial class App : Application
     {

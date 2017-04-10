@@ -1,10 +1,10 @@
 using System.Windows.Controls;
 using System;
 
-using CodeLog.Interfaces;
-using CodeLog.Classes;
+using VoiceLogger.Interfaces;
+using VoiceLogger.Classes;
 
-namespace CodeLog.Pages
+namespace VoiceLogger.Pages
 {
     public partial class VersionPage : Page, ISwitchable
     {

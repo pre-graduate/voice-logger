@@ -2,7 +2,7 @@ using Microsoft.Speech.AudioFormat;
 using Microsoft.Speech.Recognition;
 using System;
 
-namespace CodeLog.Classes
+namespace VoiceLogger.Classes
 {
     using Interfaces;
 

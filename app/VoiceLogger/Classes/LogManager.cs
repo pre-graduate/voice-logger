@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using CodeLog.Interfaces;
+using VoiceLogger.Interfaces;
 
-namespace CodeLog.Classes
+namespace VoiceLogger.Classes
 {
     public class LogManager
     {

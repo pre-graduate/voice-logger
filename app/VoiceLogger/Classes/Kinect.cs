@@ -2,10 +2,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media;
 using System.Windows;
 
-using static CodeLog.Classes.Alerts;
 using Microsoft.Kinect;
 
-namespace CodeLog.Classes
+namespace VoiceLogger.Classes
 {
     public class Kinect
     {    
@@ -37,7 +36,6 @@ namespace CodeLog.Classes
                 return true;
             }
            
-            ShowError("No Kinect Found!", "Couldn't find an available kinect device!");
             return false;
         }
 

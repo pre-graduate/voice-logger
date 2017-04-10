@@ -1,7 +1,7 @@
 
 using Microsoft.Speech.Recognition;
 
-namespace CodeLog.Interfaces
+namespace VoiceLogger.Interfaces
 {
     public interface ISpeech
     {

@@ -1,22 +1,30 @@
 ﻿using System.Windows;
+using MahApps.Metro.Controls.Dialogs;
+using MahApps.Metro.Controls;
 
-namespace CodeLog.Classes
+namespace VoiceLogger.Classes
 {
     public static class Alerts
     {
-        public static void ShowError(string title, string body)
+        public static async void ShowError(string title, string body)
         {
-            MessageBox.Show(body, title, MessageBoxButton.OK, MessageBoxImage.Error);
+            var metroWindow = (Application.Current.MainWindow as MetroWindow);
+
+            await metroWindow?.ShowMessageAsync(title, body, MessageDialogStyle.Affirmative);
         }
 
-        public static void ShowInfo(string title, string body)
+        public static async void ShowInfo(string title, string body)
         {
-            MessageBox.Show(body, title, MessageBoxButton.OK, MessageBoxImage.Information);
+            var metroWindow = (Application.Current.MainWindow as MetroWindow);
+
+            await metroWindow?.ShowMessageAsync(title, body, MessageDialogStyle.Affirmative);
         }
 
-        public static void ShowSuccess(string title, string body)
+        public static async void ShowSuccess(string title, string body)
         {
-            MessageBox.Show(body, title, MessageBoxButton.OK, MessageBoxImage.None);
+            var metroWindow = (Application.Current.MainWindow as MetroWindow);
+
+            await metroWindow?.ShowMessageAsync(title, body, MessageDialogStyle.Affirmative);
         }
     }
 }

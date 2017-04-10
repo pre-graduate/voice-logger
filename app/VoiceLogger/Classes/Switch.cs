@@ -1,4 +1,4 @@
-namespace CodeLog.Classes
+namespace VoiceLogger.Classes
 {
     public static class Switch
     {

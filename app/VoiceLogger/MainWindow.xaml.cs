@@ -2,14 +2,17 @@
 using System.Windows;
 using System;
 
-using CodeLog.Interfaces;
-using CodeLog.Classes;
-using CodeLog.Pages;
+using MahApps.Metro.Controls;
+using VoiceLogger.Interfaces;
+using VoiceLogger.Classes;
+using VoiceLogger.Pages;
 
-namespace CodeLog
+namespace VoiceLogger
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
+        const string GitHubLink = "https://github.com/william-taylor/voice-logger";
+
         public List<ISwitchable> Pages { get; }
 
         public MainWindow()
@@ -58,6 +61,11 @@ namespace CodeLog
             }
 
             return default(TState);
+        }
+
+        private void OpenGitHub(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(GitHubLink);
         }
     }
 }

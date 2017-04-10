@@ -1,6 +1,6 @@
 using NAudio.Wave;
 
-namespace CodeLog.Classes
+namespace VoiceLogger.Classes
 {
     public class WavFile
     {
