@@ -18,17 +18,21 @@ namespace CodeLog.Pages
 
         public MainPage()
         {
+            InitializeComponent();
+
             if (WindowsKinect.InitialiseDevice())
             {
-                InitializeComponent();
-
-                RecognitionEngine = new Recogniser(WindowsKinect);
-                RecognitionEngine.Initialise(SpeechDetector);
+               
             }
             else
             {
-               Application.Current.Shutdown();
+                #if false
+                Application.Current.Shutdown();
+                #endif
             }
+
+            RecognitionEngine = new Recogniser(WindowsKinect);
+            RecognitionEngine.Initialise(SpeechDetector);
         }
 
         public void ExportLogs(object sender, EventArgs e)

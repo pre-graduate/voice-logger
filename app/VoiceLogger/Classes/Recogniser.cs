@@ -26,6 +26,11 @@ namespace CodeLog.Classes
 
         public void Initialise(Speech words)
         {
+            if(WindowKinect.Device == null)
+            {
+                return;
+            }
+
             WordsToWatch = words;
 
             var commands = words.GetCommands(new Choices());
