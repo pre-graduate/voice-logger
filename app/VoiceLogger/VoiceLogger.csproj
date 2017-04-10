@@ -172,8 +172,6 @@
   <ItemGroup>
     <Resource Include="Pages\images\Background.jpg" />
     <Resource Include="icon.ico" />
-    <Resource Include="Pages\images\icon.png" />
-    <Resource Include="Pages\images\version.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\Sounds\beep.wav">
